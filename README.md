@@ -1,6 +1,8 @@
 jquery.placement
 ================
 
+[![Build Status](https://travis-ci.org/reflectiveSingleton/jquery.placement.png?branch=master)](https://travis-ci.org/reflectiveSingleton/footwork) [![Bower version](https://badge.fury.io/bo/jquery.placement.png)](http://badge.fury.io/bo/jquery.placement)
+
 jQuery plugin providing an easy way of getting all of an elements layout information.
 
 A couple of example usages (more documentation soon):
