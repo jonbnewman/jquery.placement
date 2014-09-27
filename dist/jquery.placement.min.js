@@ -1,7 +1,7 @@
 /**
  * jquery.placement - jQuery plugin providing an easy way of getting all of an elements layout information.
  * Author: Jonathan Newman (http://staticty.pe)
- * Version: v0.1.0
+ * Version: v0.1.2
  * Url: http://staticty.pe/code/placement
  * License(s): MIT
  */
