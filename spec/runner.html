@@ -4,8 +4,27 @@
     <title>jquery.placement Test Runner</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../bower_components/mocha/mocha.css" />
+    <style>
+      body, html {
+        margin: 0;
+        padding: 0;
+      }
+      .test-element {
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        width: 100px;
+        height: 100px;
+        background: #2daed3;
+        box-shadow: 0 1px 3px -1px black;
+      }
+      .test-element:hover {
+        box-shadow: 0 1px 3px 0px black;
+      }
+    </style>
   </head>
   <body>
+    <div class="test-element"></div>
     <div id="mocha"></div>
     <script src="../bower_components/mocha/mocha.js"></script>
     <script src="../bower_components/expect/expect.js"></script>

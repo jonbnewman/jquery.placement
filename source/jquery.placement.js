@@ -7,12 +7,14 @@
     factory(jQuery);
   }
 }(function ($) {
-  function CalcProp( $element ) {
+  var $window = $(window);
+
+  function CalcProp( $element, positionMethod, options ) {
     var cached = {};
     var self = this;
 
     this.placement = function() {
-      return cached.placement || ( cached.placement = $element[ positionGetter ]() );
+      return cached.placement || ( cached.placement = $element[ positionMethod ]() );
     };
 
     this.top = function() {
@@ -27,12 +29,16 @@
       return cached.left || ( cached.left = this.placement().left + ( parseInt( options.adjustment.left, 10 ) || 0) );
     };
 
-    this.rightOffset = function() {
-      return cached.rightOffset || ( cached.rightOffset = self.left() + self.width() + ( parseInt( options.adjustment.right, 10 ) || 0) );
+    this.leftOffset = function() {
+      return cached.leftOffset || ( cached.leftOffset = $window.width() - self.left() );
     };
 
     this.right = function() {
-      return cached.right || ( cached.right = $window.width() - self.rightOffset() );
+      return cached.right || ( cached.right = self.left() + self.width() + ( parseInt( options.adjustment.right, 10 ) || 0) );
+    };
+
+    this.rightOffset = function() {
+      return cached.rightOffset || ( cached.rightOffset = $window.width() - self.right() );
     };
 
     this.height = function() {
@@ -52,19 +58,19 @@
       
   $.fn.placement = function( options ) {
     var defaultOptions = {
-      prop: [ 'top', 'bottom', 'height', 'width', 'left', 'right' ],
+      prop: [ 'top', 'bottom', 'height', 'width', 'left', 'leftOffset', 'right', 'rightOffset' ],
       adjustment: { },
       context: 'document'
     };
     
     var options = ( typeof options !== 'undefined' && $.extend( {}, defaultOptions, options ) ) || defaultOptions;
     var props = [];
-    var positionGetter = ( options.context === 'document' ? 'offset' : 'position' );
+    var positionMethod = ( options.context === 'document' ? 'offset' : 'position' );
 
     this.each(function() {
       var $element = $(this);
       var prop = {};
-      var calc = new CalcProp( $element );
+      var calc = new CalcProp( $element, positionMethod, options );
 
       $.each( options.prop, function( index, property ) {
         prop[ property ] = calc[ property ]();
