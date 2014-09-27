@@ -1,0 +1,39 @@
+{
+  "name": "jquery.placement",
+  "version": "0.1.0",
+  "description": "jQuery plugin providing an easy way of getting all of an elements layout information.",
+  "homepage": "http://staticty.pe/code/placement",
+  "keywords": [
+    "jquery",
+    "plugin",
+    "layout"
+  ],
+  "author": "Jonathan Newman <jonathan@staticty.pe>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/reflectiveSingleton/jquery.placement.git"
+  },
+  "main": [
+    "dist/jquery.placement.min.js",
+    "dist/jquery.placement.js"
+  ],
+  "ignore": [
+    "source",
+    "spec",
+    "deps",
+    "bower_components",
+    "node_modules",
+    "bower.json",
+    "package.json",
+    "gulpfile.js",
+    ".travis.yml",
+    ".gitignore",
+    "README.md"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "jquery": "*",
+    "mocha": "*",
+    "expect": "0.1.2"
+  }
+}
