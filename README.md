@@ -7,6 +7,7 @@ jQuery plugin providing an easy way of getting all of an elements layout informa
 
 A couple of example usages (more documentation soon):
 
+```html
     <html>
       <!-- imaginary view port is 1000px X 1000px -->
       <body>
@@ -39,3 +40,4 @@ A couple of example usages (more documentation soon):
         placement = $('#someElement').placement({ context: 'relative' });
       </script>
     </html>
+```
