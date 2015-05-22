@@ -1,9 +1,34 @@
 jquery.placement
 ================
 
-[![Build Status](https://travis-ci.org/reflectiveSingleton/jquery.placement.png?branch=master)](https://travis-ci.org/reflectiveSingleton/footwork) [![Bower version](https://badge.fury.io/bo/jquery.placement.png)](http://badge.fury.io/bo/jquery.placement)
+[![Build Status](https://travis-ci.org/reflectiveSingleton/jquery.placement.png?branch=master)](https://travis-ci.org/reflectiveSingleton/jquery.placement) [![Bower version](https://badge.fury.io/bo/jquery.placement.png)](http://badge.fury.io/bo/jquery.placement)
 
-jQuery plugin providing an easy way of getting all of an elements layout information.
+jquery.placement is a jQuery plugin providing an easy way of getting all of an elements layout information.
+
+### Downloading jquery.placement.js
+
+jquery.placement is available via [bower](http://bower.io/):
+
+*Install via command line:*
+```bash
+# run this command in your public html folder
+bower install jquery.placement
+```
+
+*Install via ```bower.json``` (recommended)*
+```javascript
+{
+  "dependencies": {
+    "jquery.placement": "*" // add jquery.placement under "dependencies"
+  }
+}
+```
+```bash
+# run this in the same directory as your bower.json file
+bower install
+```
+
+### Using jquery.placement
 
 A couple of example usages (more documentation soon):
 
@@ -41,3 +66,43 @@ A couple of example usages (more documentation soon):
   </script>
 </html>
 ```
+
+### Building jquery.placement from source and running tests
+
+1) **Clone the repo from GitHub:**
+
+```bash
+git clone https://github.com/reflectiveSingleton/jquery.placement.git
+cd jquery.placement
+```
+
+2) **Acquire build dependencies:**
+
+Make sure you have [node.js](http://nodejs.org/) installed in your environment. jquery.placement additionally requires [gulp](http://gulpjs.com/) plus several [bower](http://bower.io/) and [NPM](https://www.npmjs.com/) dependencies when building from source...to install those run:
+
+```bash
+# install gulp (javascript task runner, http://gulpjs.com/)
+npm install -g gulp # you may need to run this under sudo
+
+# install bower (package manager, http://bower.io/)
+npm install -g bower # you may need to run this under sudo
+
+# download dependencies from npm (https://www.npmjs.com/) and bower (http://bower.io/)
+npm install && bower install
+```
+
+3) **Run a gulp task to build/test/etc:**
+
+```bash
+# build everything (output in /dist) and run tests
+gulp
+
+# build everything (output in /dist)
+gulp build
+```
+
+### License
+
+MIT license - [http://www.opensource.org/licenses/mit-license.php](http://www.opensource.org/licenses/mit-license.php)
+
+[![Analytics](https://ga-beacon.appspot.com/UA-52543452-1/jquery.placement/GITHUB-ROOT)](https://github.com/reflectiveSingleton/ga-beacon)
