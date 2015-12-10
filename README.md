@@ -1,7 +1,7 @@
 jquery.placement
 ================
 
-[![Build Status](https://travis-ci.org/reflectiveSingleton/jquery.placement.png?branch=master)](https://travis-ci.org/reflectiveSingleton/jquery.placement) [![Bower version](https://badge.fury.io/bo/jquery.placement.png)](http://badge.fury.io/bo/jquery.placement)
+[![Build Status](https://travis-ci.org/jonbnewman/jquery.placement.png?branch=master)](https://travis-ci.org/reflectiveSingleton/jquery.placement) [![Bower version](https://badge.fury.io/bo/jquery.placement.png)](http://badge.fury.io/bo/jquery.placement)
 
 jquery.placement is a jQuery plugin providing an easy way of getting all of an elements layout information.
 
